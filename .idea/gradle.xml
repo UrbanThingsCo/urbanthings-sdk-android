@@ -8,9 +8,9 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/UrbanThingsSDK" />
-            <option value="$PROJECT_DIR$/UrbanThingsSDK-rxbinding" />
-            <option value="$PROJECT_DIR$/UrbanThingsSDK-sample" />
+            <option value="$PROJECT_DIR$/urbanthings-android" />
+            <option value="$PROJECT_DIR$/urbanthings-android-rx" />
+            <option value="$PROJECT_DIR$/urbanthings-android-sample" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

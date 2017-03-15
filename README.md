@@ -19,12 +19,12 @@ Before using the demonstration app, the tests, or your own client, you need to r
 To include the library:
 
 ```gradle
-compile 'io.urbanthings:urbanthings-android:TODO:version'
+compile 'io.urbanthings:urbanthings-android:0.9.0'
 ```
 
 To include the RxJava bindings
 ```gradle
-compile 'io.urbanthings:urbanthings-android-rxbindings:TODO:version'
+compile 'io.urbanthings:urbanthings-android-rxbindings:0.9.0'
 ```
 
 To get a `TransitApi` client:
