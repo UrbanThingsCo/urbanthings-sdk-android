@@ -24,7 +24,7 @@ compile 'io.urbanthings:urbanthings-android:0.9.0'
 
 To include the RxJava bindings
 ```gradle
-compile 'io.urbanthings:urbanthings-android-rxbindings:0.9.0'
+compile 'io.urbanthings:urbanthings-android-rx:0.9.0'
 ```
 
 To get a `TransitApi` client:
