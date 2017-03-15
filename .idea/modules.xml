@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/UrbanThingsSDK/UrbanThingsSDK.iml" filepath="$PROJECT_DIR$/UrbanThingsSDK/UrbanThingsSDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UrbanThingsSDK-rxbinding/UrbanThingsSDK-rxbinding.iml" filepath="$PROJECT_DIR$/UrbanThingsSDK-rxbinding/UrbanThingsSDK-rxbinding.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UrbanThingsSDK-sample/UrbanThingsSDK-sample.iml" filepath="$PROJECT_DIR$/UrbanThingsSDK-sample/UrbanThingsSDK-sample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/github-sdk.iml" filepath="$PROJECT_DIR$/github-sdk.iml" />
+    </modules>
+  </component>
+</project>
