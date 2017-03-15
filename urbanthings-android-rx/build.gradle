@@ -6,7 +6,7 @@ ext {
 
     PUBLISH_GROUP_ID = 'io.urbanthings'
     PUBLISH_ARTIFACT_ID = 'urbanthings-android-rx'
-    PUBLISH_VERSION = 'urbanthings-android-rx'
+    PUBLISH_VERSION = '0.9.0'
 
     libraryDescription = 'Urban Things Android SDK'
 
