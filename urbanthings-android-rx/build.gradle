@@ -6,14 +6,14 @@ ext {
 
     PUBLISH_GROUP_ID = 'io.urbanthings'
     PUBLISH_ARTIFACT_ID = 'urbanthings-android-rx'
-    PUBLISH_VERSION = '0.9.0'
+    PUBLISH_VERSION = '0.9.1'
 
     libraryDescription = 'Urban Things Android SDK'
 
     siteUrl = 'https://github.com/urbanthings/urbanthings-sdk-android'
     gitUrl = 'https://github.com/urbanthings/urbanthings-sdk-android.git'
 
-    libraryVersion = '0.9.0'
+    libraryVersion = '0.9.1'
 
     developerId = 'urbanthings'
     developerName = 'urbanthings'

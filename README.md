@@ -19,12 +19,12 @@ Before using the demonstration app, the tests, or your own client, you need to r
 To include the library:
 
 ```gradle
-compile 'io.urbanthings:urbanthings-android:0.9.0'
+compile 'io.urbanthings:urbanthings-android:0.9.1'
 ```
 
 To include the RxJava bindings
 ```gradle
-compile 'io.urbanthings:urbanthings-android-rx:0.9.0'
+compile 'io.urbanthings:urbanthings-android-rx:0.9.1'
 ```
 
 To get a `TransitApi` client:
@@ -77,6 +77,6 @@ The simple demonstration app implements usage of `searchPlacePoints()` to displa
 
 * Any HTTPExceptions produced by Retrofit are passed to the client as the cause provided to the ApiException. In time these will be mapped to SDK specific Exceptions to allow other HTTP libraries to be used.
 
-* The underlying `OkHttp` client is configured with a `HttpLoggingInterceptor`. At the moment this can't be disabled, but will be configurable when we release a production ready version of the SDK.
+* The underlying `OkHttp` client is configured with a `HttpLoggingInterceptor`. At the moment there is only basic binary configuration of this exposed by the TransitApi objects - call `enableLogging(boolean)` to either disable it, or enable it with full logging of request and response bodies
 
 * The SDK is implemented without Lambdas to ensure it doesn't enforce the use of the [Jack toolchain](https://source.android.com/source/jack.html) on developers
