@@ -86,6 +86,7 @@ public class RxTransitApiTests {
     @Before
     public void setup() {
         rxTransitApi = RxTransitApiManager.rxTransitApi(BASE_URL,API_KEY);
+        rxTransitApi.enableLogging(true);
     }
 
 

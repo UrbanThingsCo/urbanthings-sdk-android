@@ -39,6 +39,7 @@ import io.urbanthings.api.transit.model.TransitTrip;
 import io.urbanthings.api.transit.model.TransitTripCalendarGroup;
 import io.urbanthings.api.transit.model.VehiclePassingType;
 import io.urbanthings.api.transit.model.VehicleType;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Call;
 
 /**
@@ -51,7 +52,8 @@ public class TransitApi extends BaseApi {
     private RetrofitTransitApi api;
     private String key;
 
-    protected TransitApi(RetrofitTransitApi retrofitApi, String apiKey) {
+    protected TransitApi(RetrofitTransitApi retrofitApi, String apiKey, HttpLoggingInterceptor loggingInterceptor) {
+        super(loggingInterceptor);
         this.api = retrofitApi;
         this.key = apiKey;
     }

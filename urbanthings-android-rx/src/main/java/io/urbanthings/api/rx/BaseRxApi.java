@@ -23,10 +23,15 @@ import java.io.IOException;
 import io.urbanthings.api.ApiException;
 import io.urbanthings.api.BaseApi;
 import io.urbanthings.api.transit.model.ApiResponse;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.HttpException;
 import retrofit2.adapter.rxjava.Result;
 
 public abstract class BaseRxApi extends BaseApi {
+
+    public BaseRxApi(HttpLoggingInterceptor loggingInterceptor) {
+        super(loggingInterceptor);
+    }
 
     /*
      * Synchronous handling

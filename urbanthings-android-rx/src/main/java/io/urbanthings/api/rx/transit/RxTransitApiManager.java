@@ -35,7 +35,7 @@ public class RxTransitApiManager extends TransitApiManager {
         checkNotNull(baseUrl, "baseUrl cannot be null");
         checkNotNull(key, "key cannot be null");
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
-        interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+        interceptor.setLevel(HttpLoggingInterceptor.Level.NONE);
         OkHttpClient client = new OkHttpClient.Builder().addNetworkInterceptor(interceptor).build();
         Retrofit retrofit = new Retrofit.Builder()
                 .client(client)
@@ -45,7 +45,7 @@ public class RxTransitApiManager extends TransitApiManager {
                 .build();
 
         RetrofitRxTransitApi rxRetrofitApi = retrofit.create(RetrofitRxTransitApi.class);
-        return new RxTransitApi(rxRetrofitApi, key);
+        return new RxTransitApi(rxRetrofitApi, key, interceptor);
     }
 
 }

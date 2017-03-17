@@ -39,6 +39,7 @@ import io.urbanthings.api.transit.model.TransitTripCalendarGroup;
 import io.urbanthings.api.transit.model.VehiclePassingType;
 import io.urbanthings.api.transit.model.VehicleType;
 
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.adapter.rxjava.Result;
 import rx.Single;
 import rx.functions.Func1;
@@ -48,7 +49,8 @@ public class RxTransitApi extends BaseRxApi {
     private static final String VERSION = "2.0";
     private RetrofitRxTransitApi api;
     private String key;
-    protected RxTransitApi(RetrofitRxTransitApi api, String key) {
+    protected RxTransitApi(RetrofitRxTransitApi api, String key, HttpLoggingInterceptor loggingInterceptor) {
+        super(loggingInterceptor);
         this.api = api;
         this.key = key;
     }

@@ -25,6 +25,7 @@ import java.util.List;
 import io.urbanthings.api.transit.model.ApiResponse;
 import io.urbanthings.api.transit.model.PlacePointType;
 import io.urbanthings.api.transit.model.VehicleType;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.HttpException;
@@ -32,6 +33,12 @@ import retrofit2.Response;
 
 
 public abstract class BaseApi {
+
+    private HttpLoggingInterceptor loggingInterceptor;
+
+    public BaseApi(HttpLoggingInterceptor loggingInterceptor) {
+        this.loggingInterceptor = loggingInterceptor;
+    }
 
     /*
      * Asynchronous handling
@@ -99,5 +106,14 @@ public abstract class BaseApi {
         }
         return buf.toString();
     }
+
+
+    public void enableLogging(boolean enable) {
+        if (loggingInterceptor != null) {
+            loggingInterceptor.setLevel(enable ? HttpLoggingInterceptor.Level.BODY : HttpLoggingInterceptor.Level.NONE);
+        }
+
+    }
+
 
 }

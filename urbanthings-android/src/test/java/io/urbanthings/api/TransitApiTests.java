@@ -71,6 +71,7 @@ public class TransitApiTests {
     @Before
     public void setup() {
         transitApi = TransitApiManager.transitApi(BASE_URL, API_KEY);
+        transitApi.enableLogging(true);
     }
     
     @Test
