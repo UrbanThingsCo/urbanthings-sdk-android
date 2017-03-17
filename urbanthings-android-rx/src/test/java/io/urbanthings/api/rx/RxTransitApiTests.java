@@ -161,6 +161,7 @@ public class RxTransitApiTests {
             // expected
             assertNotNull(e.getMessage() != null);
             assertTrue(e.getCause() instanceof Exception);
+            assertEquals("\"A lat/lng boundary box Must be smaller than 20km x 20km.\"", e.getLocalisedErrorMessage());
             return;
         }
         fail();

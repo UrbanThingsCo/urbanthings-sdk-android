@@ -18,6 +18,7 @@
 
 package io.urbanthings.api;
 
+import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
 
@@ -44,7 +45,16 @@ public abstract class BaseApi {
                     if (response.isSuccessful()) {
                         callback.onSuccess(response.body().data);
                     } else {
-                        callback.onError(new ApiException(new HttpException(response), response.body() != null ? response.body().localizedErrorMessage : null));
+                        String errorMessage = null;
+                        try {
+                            if (response.errorBody() != null) {
+                                errorMessage = response.errorBody().string();
+                            }
+                        } catch (IOException e) {
+                            // ignore
+                        }
+
+                        callback.onError(new ApiException(new HttpException(response), errorMessage));
                     }
                 }
             }

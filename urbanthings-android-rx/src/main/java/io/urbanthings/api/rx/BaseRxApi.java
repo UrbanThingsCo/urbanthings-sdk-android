@@ -18,6 +18,8 @@
 
 package io.urbanthings.api.rx;
 
+import java.io.IOException;
+
 import io.urbanthings.api.ApiException;
 import io.urbanthings.api.BaseApi;
 import io.urbanthings.api.transit.model.ApiResponse;
@@ -34,7 +36,16 @@ public abstract class BaseRxApi extends BaseApi {
         if (result.isError()) {
             throw new ApiException(result.error());
         } else if (!result.response().isSuccessful()) {
-            throw new ApiException(new HttpException(result.response()), result.response().body() != null ? result.response().body().localizedErrorMessage : null);
+            String errorMessage = null;
+            try {
+                if (result.response().errorBody() != null) {
+                    errorMessage = result.response().errorBody().string();
+                }
+            } catch (IOException e) {
+                // ignore
+            }
+
+            throw new ApiException(new HttpException(result.response()), errorMessage);
         }
     }
 

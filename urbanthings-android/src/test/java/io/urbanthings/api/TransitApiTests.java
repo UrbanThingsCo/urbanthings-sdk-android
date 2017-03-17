@@ -133,5 +133,7 @@ public class TransitApiTests {
         assertTrue(throwables.get(0) instanceof ApiException);
         assertNotNull(throwables.get(0).getMessage() != null);
         assertTrue(throwables.get(0).getCause() instanceof HttpException);
+        assertEquals("\"A lat/lng boundary box Must be smaller than 20km x 20km.\"", ((ApiException)throwables.get(0)).getLocalisedErrorMessage());
+
     }
 }

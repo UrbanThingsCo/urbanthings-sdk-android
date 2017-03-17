@@ -28,6 +28,7 @@ public class ApiException extends RuntimeException {
 
     public ApiException(Throwable cause, String localisedErrorMessage) {
         super(cause);
+        this.localisedErrorMessage = localisedErrorMessage;
     }
 
     public String getLocalisedErrorMessage() {
